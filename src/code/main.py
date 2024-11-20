@@ -36,4 +36,23 @@ class RemoveWhiteSpace():
             return False
         return True
     
-    def main():
+def main():
+    """Main function to execute the program."""
+
+    # Set up command-line argument parsing
+    parser = argparse.ArgumentParser(description="Remove whitespace from a file.")
+    parser.add_argument("file_path", help="Path to the file to process")
+    args = parser.parse_args()
+
+    # Initialize RemoveWhiteSpace class and process the file
+    remover = RemoveWhiteSpace(args.file_path)
+
+    if remover.not_valid_file():  # Correctly calls validate_file
+        content = remover.open_file()
+        modified_content = remover.remove_whitespace(content)
+        remover.save_modified_files(modified_content)
+
+
+
+if __name__ == "__main__":
+    main()
