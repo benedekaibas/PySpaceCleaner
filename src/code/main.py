@@ -29,4 +29,11 @@ class RemoveWhiteSpace():
             file.write(content)
             console.print(f"File '{self.file_path}' has been processed and saved.")
     
+    def not_valid_file(self) -> bool:
+        """Check if file is valid and exists"""
+        if not os.path.isfile(self.file_path):
+            console.print(f"[red]Error: '{self.file_path}' is not a valid file.[/red]")
+            return False
+        return True
+    
     def main():
