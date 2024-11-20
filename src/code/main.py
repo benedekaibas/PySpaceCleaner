@@ -1,6 +1,7 @@
 """Main file of the project containing all the functions."""
 
 import os
+import re
 import argparse
 from rich.console import Console
 
@@ -21,7 +22,7 @@ class RemoveWhiteSpace():
     
     def remove_whitespace(self, content: str):
         """Removing whitespace from a file."""
-        return ''.join(content.split())
+        return re.sub(r' +', ' ', content)
     
     def save_modified_files(self, content: str) -> str:
         """Save the modified file for the user."""
