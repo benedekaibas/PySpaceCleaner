@@ -15,7 +15,7 @@ class RemoveWhiteSpace():
 
     def open_file(self):
         """Opening files from input."""
-        with open(self.file_path, "r") as file:
+        with open(self.file_path, "r", encoding = "utf-8") as file:
             content = file.read()
 
         return content
@@ -26,7 +26,7 @@ class RemoveWhiteSpace():
 
     def save_modified_files(self, content: str) -> str:
         """Save the modified file for the user."""
-        with open(self.file_path, 'w') as file:
+        with open(self.file_path, 'w', encoding = "utf-8") as file:
             file.write(content)
             console.print(f"File '{self.file_path}' has been processed and saved.")
 
