@@ -19,24 +19,24 @@ class RemoveWhiteSpace():
             content = file.read()
 
         return content
-    
+
     def remove_whitespace(self, content: str):
         """Removing whitespace from a file."""
         return re.sub(r' +', ' ', content)
-    
+
     def save_modified_files(self, content: str) -> str:
         """Save the modified file for the user."""
         with open(self.file_path, 'w') as file:
             file.write(content)
             console.print(f"File '{self.file_path}' has been processed and saved.")
-    
+
     def not_valid_file(self) -> bool:
         """Check if file is valid and exists"""
         if not os.path.isfile(self.file_path):
             console.print(f"[red]Error: '{self.file_path}' is not a valid file.[/red]")
             return False
         return True
-    
+
 def main():
     """Main function to execute the program."""
 
@@ -52,7 +52,6 @@ def main():
         content = remover.open_file()
         modified_content = remover.remove_whitespace(content)
         remover.save_modified_files(modified_content)
-
 
 
 if __name__ == "__main__":
