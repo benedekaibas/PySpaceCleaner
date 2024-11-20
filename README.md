@@ -10,9 +10,9 @@ PySpaceCleaner supports a simple and intuitive command-line interface, allowing 
 
 ## ✨ Features of PySpaceCleaner
 
-**Ease of Use**: A straightforward interface to quickly process files with minimal effort.
-**Automation**: Removes the need for manual editing by automating whitespace removal across entire files.
-**Reliability**: Processes files securely, ensuring no data is lost aside from unwanted whitespace.
+**Ease of Use**: A straightforward interface to quickly process files with minimal effort.  
+**Automation**: Removes the need for manual editing by automating whitespace removal across entire files.  
+**Reliability**: Processes files securely, ensuring no data is lost aside from unwanted whitespace.  
 **Versatility**: Applicable to a variety of use cases, such as cleaning up large datasets, preparing scripts for deployment, or refining configuration files.
 
 ## 🤝 Contribution to the project
