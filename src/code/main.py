@@ -39,7 +39,6 @@ class RemoveWhiteSpace():
 
 def main():
     """Main function to execute the program."""
-
     # Set up command-line argument parsing
     parser = argparse.ArgumentParser(description="Remove whitespace from a file.")
     parser.add_argument("file_path", help="Path to the file to process")
