@@ -22,14 +22,16 @@ class RemoveWhiteSpace():
 
     def remove_whitespace(self, content: str):
         """Removing whitespace from a file."""
-        return re.sub(r' +', ' ', content)
+        content = re.sub(r' +', ' ', content)
+        content = re.sub(r'^\s*$', '', content, flags=re.MULTILINE)
+        return content
 
 
     def save_modified_files(self, content: str) -> str:
         """Save the modified file for the user."""
         with open(self.file_path, 'w', encoding = "utf-8") as file:
             file.write(content)
-            print(f"File '{self.file_path}' has been processed and saved.")
+            print(f"[green]File '{self.file_path}' has been processed and saved.[/green]")
 
 
     def not_valid_file(self) -> bool:
