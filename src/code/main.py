@@ -22,8 +22,15 @@ class RemoveWhiteSpace():
 
     def remove_whitespace(self, content: str):
         """Removing whitespace from a file."""
-        content = re.sub(r' +', ' ', content)
+        # remove whitespace between string characters
+        def keep_backticks(match):
+            return match.group(0)
+        # remove whitespace between string characters
+        content = re.sub(r'(`[^`]*`)| +', lambda m: keep_backticks(m) if m.group(1) else ' ', content)
+
+        # remove whitespaces from blank lines
         content = re.sub(r'^\s*$', '', content, flags=re.MULTILINE)
+        # remove whitespaces from lines that end with whitespaces
         content = re.sub(r' +\n', '\n', content)
 
         return content
