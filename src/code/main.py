@@ -24,6 +24,8 @@ class RemoveWhiteSpace():
         """Removing whitespace from a file."""
         content = re.sub(r' +', ' ', content)
         content = re.sub(r'^\s*$', '', content, flags=re.MULTILINE)
+        content = re.sub(r' +\n', '\n', content)
+
         return content
 
 
