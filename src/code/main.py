@@ -51,7 +51,7 @@ class RemoveWhiteSpace():
             console.print(f"[red]Error: '{self.file_path}' is not a valid file.[/red]")
             return False
         return True
-
+                   
 def main():
     """Main function to execute the program."""
     # Set up command-line argument parsing
