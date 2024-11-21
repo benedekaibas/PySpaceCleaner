@@ -3,7 +3,9 @@
 import os
 import re
 import argparse
+from rich.console import Console
 
+console = Console()
 
 class RemoveWhiteSpace():
     """Main class of the project containing all the necessary functions. """
@@ -40,13 +42,13 @@ class RemoveWhiteSpace():
         """Save the modified file for the user."""
         with open(self.file_path, 'w', encoding = "utf-8") as file:
             file.write(content)
-            print(f"[green]File '{self.file_path}' has been processed and saved.[/green]")
+            console.print(f"[green]File '{self.file_path}' has been processed and saved.[/green]")
 
 
     def not_valid_file(self) -> bool:
         """Check if file is valid and exists"""
         if not os.path.isfile(self.file_path):
-            print(f"[red]Error: '{self.file_path}' is not a valid file.[/red]")
+            console.print(f"[red]Error: '{self.file_path}' is not a valid file.[/red]")
             return False
         return True
 
