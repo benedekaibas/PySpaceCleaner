@@ -17,4 +17,4 @@ PySpaceCleaner supports a simple and intuitive command-line interface, allowing 
 
 ## 🤝 Contribution to the project
 
-lorem ipsum
+PySpaceCleaner is designed for simplicity and ease of use. To run the program, navigate to the directory containing the main file, located at PySpaceCleaner/src/code, and execute the following command: `python main.py /path/to/your/library`, replacing `/path/to/your/library` with the absolute or relative path to the directory you wish to clean. To run the code you have to be in the folder of the `main.py`'s file. It is located in the `PySpaceCleaner/src/code` folder.
