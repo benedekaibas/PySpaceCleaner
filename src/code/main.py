@@ -52,6 +52,7 @@ class RemoveWhiteSpace():
             return False
         return True
 
+
 def main():
     """Main function to execute the program."""
     # Set up command-line argument parsing
