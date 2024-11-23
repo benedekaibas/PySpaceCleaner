@@ -4,6 +4,7 @@ import sys
 import os
 import unittest
 from unittest.mock import mock_open, patch
+from code.main import RemoveWhiteSpace
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
