@@ -4,11 +4,10 @@ import sys
 import os
 import unittest
 from unittest.mock import mock_open, patch
-from code.main import RemoveWhiteSpace # ignore
+from code.main import RemoveWhiteSpace
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from code.main import RemoveWhiteSpace
 
 class TestRemoveWhiteSpace(unittest.TestCase):
     """Test cases for the main.py file. """
